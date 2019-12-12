@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Athena - Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="img/icons/owl.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/HomeCSS.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header>
+      <a href="/home" class="logo" data-scroll> <img src="img/Athena.png" height="42" width="42"> </a>
+      <nav class="nav-collapse">
+        <ul>
+          <li class="menu-item active"><a href="Home.html" data-scroll>Home</a></li>
+          <li class="menu-item active"><a href="Desempenho.html" data-scroll>Desempenho</a></li>
+          <li class="menu-item active"><a href="Perfil.html" data-scroll>Perfil</a></li>
+          <li class="menu-item active"><a href="Disciplinas.html" data-scroll>Disciplinas</a></li>
+          <li class="menu-item active"><a href="Login.html" data-scroll>Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<table data-vertable="ver1">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">Disciplina</th>
+								<th class="column100 column2" data-column="column2">Conteúdo</th>
+								<th class="column100 column3" data-column="column3">Horas Estudadas</th>
+								<th class="column100 column4" data-column="column4">Após 01 dia</th>
+								<th class="column100 column5" data-column="column5">Após 07 dias</th>
+								<th class="column100 column6" data-column="column6">Após 15 dias</th>
+								<th class="column100 column7" data-column="column7">Após 30 dias</th>
+							</tr>
+						</thead>
+						<tbody>
+							<%for(let i = 0;i < disc.length;i++){%>
+							<tr class="row100">
+								<td class="column100 column1" rowspan="<%=Object.keys(disc[i].conteudo).length%>" data-column="column1"><%=disc[i].nome%></td>
+								<td class="column100 column2" data-column="column2"><a><%=disc[i].conteudo[0]%></a></td>
+								<td class="column100 column3" data-column="column3"><a href="/cronoEstudo?nickname=<%=user.nickname%>" ><%=disc[i].horas[0]%></a></td>
+								<td class="column100 column4" data-column="column4"><a>11/01/2011</a></td>
+								<td class="column100 column5" data-column="column5"><a>18/01/2011</a></td>
+								<td class="column100 column6" data-column="column6"><a>26/01/2011</a></td>
+								<td class="column100 column7" data-column="column7"><a>11/02/2011</a></td>
+							</tr>
+							<%for(let j = 1;j < Object.keys(disc[i].conteudo).length;j++){%>
+							<tr class="row100">
+								<td class="column100 column2" data-column="column2"><a><%=disc[i].conteudo[j]%></a></td>
+								<td class="column100 column3" data-column="column3"><a href="/cronoEstudo?nickname=<%=user.nickname%>" ><%=disc[i].horas[j]%></a></td>
+								<td class="column100 column4" data-column="column4"><a>11/01/2011</a></td>
+								<td class="column100 column5" data-column="column5"><a>18/01/2011</a></td>
+								<td class="column100 column6" data-column="column6"><a>26/01/2011</a></td>
+								<td class="column100 column7" data-column="column7"><a>11/02/2011</a></td>
+							</tr>
+							<%}%>
+							<%}%>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<script src="js/fastclick.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/fixed-responsive-nav.js"></script>
+
+</body>
+</html>

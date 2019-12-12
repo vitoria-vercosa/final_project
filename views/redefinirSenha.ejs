@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../public/css/cadastro.css">
+  </head>
+  <body>
+    <!--<h1>Hello, world!</h1> -->
+
+     <div class="container" id="form">
+
+        <div class="row">
+            <h1>Sistema de Controle de Alunos</h1>
+            <img id="ajuda" data-toggle="modal" data-target="#modalAutora" src="/img/ajuda.jpg"  style="width: 40px; height: 40px; margin-left: 20px;" >
+        </div>
+      
+        <div class="modal fade" id="modalAutora">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+                      <div class="modal-header">
+                          <h4 class="modal-title">Autor</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="img/autora.jpg" alt="autora" class="float-left" 
+                          style="width: 30px; height: 30px; border-radius: 50%;
+                          width: 150px;
+                          height: 150px;
+                          overflow: hidden;
+                          position: relative;">
+                          <p>Athena 
+                              curva do esquecimento
+                          </p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+            </div>
+
+        </div>
+    
+
+      <div class="card container" style="width: 400px; padding: 0%;">
+
+            <div class="card-header container" style="background-color: rgb(32, 93, 185); color: white"  >
+              <strong>Redefinir Senha</strong>
+            </div> <!--close card-header-->
+
+            <div class="card-body container" style="padding: 0%; margin:0%">
+                <form id="form_aluno" method="POST" style="margin-top: 10px;">
+
+                  <div class="form-row container">
+
+                      <div class="form-group col-md-12" >
+                          <label for="email"><strong>Email</strong></label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                      </div>
+
+                  </div><!--close row-->
+
+                  <div class="form-row container">
+                      
+                      <div class="form-group col-md-12">
+                          <label for="inputEmail"><strong>Nova Senha</strong></label>
+                          <input type="password" class="form-control" id="senha" name="senha" required>
+                      </div>
+
+                  </div><!--close row-->
+
+                  <div class="card-footer container" style="background-color: rgb(240, 240, 240); color: white; margin: 0%;"  >
+                      
+                      <button type="submit" class="btn btn-light" value="Confirmar">Redefinir</button> <br>
+                      <!--<button type="reset" class="btn btn-light" value="Limpar">Limpar</button>-->
+                      <!--<input type="submit" class="btn float-right btn-light" value="Inserir Linha" onclick="processar('tableAluno')">-->
+                      
+                  </div><!--close card-footer -->
+                </form>
+            </div> <!--close card-body -->
+
+
+
+      </div> <!--close card-->
+    </div>
+
+    <script src="js/aluno.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<html lang="pt">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<head><title>Cronômetro</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../public/css/bootstrap.min.css" >    
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="../public/css/cronometro.css" type="text/css" media="screen" />
+		<script language="JavaScript" src="../public/js/cronometro.js"></script>
+	</head>
+
+	<body>
+		<p><b>Cronômetro:</b></p>
+		<div class=" container">
+
+			<h1><span id="hora">00h</span><span id="minuto">00m</span><span id="segundo">00s</span><br></h1>
+			
+			<div class="row">
+				<!--<div class="card"><input type="button" value="Volta" onclick="volta();"></div>-->
+
+				<div id="parar" class="card"><input type="button" value="Parar" class="btn" onclick="parar();"></div>
+				<div id="comeca" class="card" style="display:none;"><input type="button" value="Começar" class="btn" onclick="tempo(1,0,0,1);"><br></div>
+
+				<div id="pausar" class="card"> <input type="button" value="Pausar" class="btn" onclick="pausar();"></div>
+				<div id="recomecar" class="card" style="display:none;"> <input type="button" value="Recomeçar" class="btn" onclick="recomecar()"></div>
+
+				<div class="card"><input type="button" value="Limpar" class="btn" onclick="limpa();"><br><br></div>
+				
+
+			</div>
+
+			<!--<div id="voltas"></div>-->
+
+		</div>
+
+
+		
+	</body>
+
+</html>

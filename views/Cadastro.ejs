@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Athena - Cadastro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="img/icons/owl.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/CadastroCSS.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="/user" method="POST">
+				<span class="contact100-form-title">
+					Seja Bem-Vindo(a)!
+				</span>
+
+				<label class="label-input100" for="name">Informe seu nome</label>
+				<div class="wrap-input100 validate-input" data-validate="Digite seu nome">
+					<input id="first-name" class="input100" type="text" name="nome" placeholder="Nome">
+					<span class="focus-input100"></span>
+				</div>
+				<!-- <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Digite seu sobrenome">
+					<input id="second-name" class="input100" type="text" name="last-name" placeholder="Sobrenome">
+					<span class="focus-input100"></span>
+				</div> -->
+
+				<label class="label-input100" for="user">Informe seu nickname</label>
+				<div class="wrap-input100 validate-input" data-validate = "Digite seu nickname">
+					<input id="nickname" class="input100" type="text" name="nickname" placeholder="Nickname">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="email">Informe seu email</label>
+				<div class="wrap-input100 validate-input" data-validate = "Email válido e obrigatório: ex@abc.xyz">
+					<input id="email" class="input100" type="text" name="email" placeholder="Ex.: example@email.com">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="password">Informe sua senha</label>
+				<div class="wrap-input100 validate-input" data-validate = "Digite sua senha">
+					<input id="password" class="input100" type="password" name="senha" placeholder="Senha" >
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="date">Informe sua data de nascimento</label>
+				<div class="wrap-input100 validate-input" data-validate = "Informe sua data de nascimento">
+					<input type="date" class="input100" id="date" name="dataNasc">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="disciplinas">Informe a quantidade de disciplinas</label>
+				<div class="wrap-input100 validate-input" data-validate = "Selecione a quantidade de disciplinas">
+					<input type="number" class="input100" min="1" max="10" placeholder="0" id="disciplinas" name="contDisciplina">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="hours">Informe a quantidade de horas livres para estudo por dia</label>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Informe o tempo de segunda">
+					<input type="number" class="input100" min="0" max="10" placeholder="Segunda" id="horasSegunda" name="horasSegunda">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Informe o tempo de terça">
+					<input type="number" class="input100" min="0" max="10" placeholder="Terça" id="horasTerca" name="horasTerca">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Informe o tempo de quarta">
+					<input type="number" class="input100" min="0" max="10" placeholder="Quarta" id="horasQuarta" name="horasQuarta">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Informe o tempo de quinta">
+					<input type="number" class="input100" min="0" max="10" placeholder="Quinta" id="horasQuinta" name="horasQuinta">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Informe o tempo de sexta">
+					<input type="number" class="input100" min="0" max="10" placeholder="Sexta" id="horasSexta" name="horasSexta">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Informe o tempo de sábado">
+					<input type="number" class="input100" min="0" max="10" placeholder="Sábado" id="horasSabado" name="horasSabado">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate = "Informe o tempo de domingo">
+					<input type="number" class="input100" min="0" max="10" placeholder="Domingo" id="horasDomingo" name="horasDomingo">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<input type="submit" class="contact100-form-btn" value="PRÓXIMO">
+						
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('img/cadPerfil.png');">
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Athena - Estudo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="img/icons/owl.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/CadastroCSS.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header>
+      <a href="Home.html" class="logo" data-scroll> <img src="img/Athena.png" height="42" width="42"> </a>
+      <nav class="nav-collapse">
+        <ul>
+          <li class="menu-item active"><a href="Home.html" data-scroll>Home</a></li>
+          <li class="menu-item active"><a href="Estudo.html" data-scroll>Estudo</a></li>
+          <li class="menu-item active"><a href="Desempenho.html" data-scroll>Desempenho</a></li>
+          <li class="menu-item active"><a href="Perfil.html" data-scroll>Perfil</a></li>
+          <li class="menu-item active"><a href="Disciplinas.html" data-scroll>Disciplinas</a></li>
+          <li class="menu-item active"><a href="Login.html" data-scroll>Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="POST" action="/adicionarTempoEstudo">
+				<span class="contact100-form-title">
+					Hora de Estudar!
+				</span>
+
+				<!--label class="label-input100" for="name"><span id="hora">00h&nbsp&nbsp&nbsp&nbsp</span><span id="minuto">00m&nbsp&nbsp&nbsp&nbsp</span><span id="segundo">00s</span><br></label-->
+				<label class="label-input100" for="name">Informe o que será realizado</label>
+				<div class="wrap-input100">
+					<select class="form-control input100" id="atividade">
+				      <option class="input100" value="estudo">Estudo</option>
+				      <option class="input100" value="revisao">Revisão</option>
+				    </select>
+				</div>
+
+				<label class="label-input100" for="name">Informe a disciplina</label>
+				<div class="wrap-input100">
+					<select class="form-control input100" name="nomeDisciplina" id="disciplinas">
+					<%for(let i = 0;i < disc.length;i++){%>
+					  <option id="nomeDisc" class="input100" value="<%=disc[i].nome%>"><%=disc[i].nome%></option>
+					<%}%>
+				    </select>
+				</div>
+
+				<label class="label-input100" for="name">Informe o conteúdo</label>
+				<div class="wrap-input100">
+					<select class="form-control input100" name="nomeConteudo" id="conteudos">
+					<%for(let i = 0;i < disc.length;i++){%>
+						<%for(let j = 0;j < Object.keys(disc[i].conteudo).length;j++){%>
+					  	<option class="input100" value="<%=disc[i].conteudo[j]%>"><%=disc[i].conteudo[j]%></option>
+					  <%}%>
+					  <%}%>
+				    </select>
+				</div>
+
+				<label class="label-input100" for="name">Tempo de Estudo</label>
+				<div class="wrap-input100 h1-wrap-input100 validate-input">
+					<input id="hora" readonly class="input100" type="text" name="hora" value="00h">
+				</div>
+				<div class="wrap-input100 h2-wrap-input100 validate-input">
+					<input id="minuto" readonly class="input100" type="text" name="minuto" value="00m">
+				</div>
+				<div class="wrap-input100 h3-wrap-input100 validate-input">
+					<input id="segundo" readonly class="input100" type="text" name="segundo" value="00s">
+				</div>
+
+				<div class="container-contact100-form-btn" id="comeca">
+					<button class="contact100-form-btn" onclick="tempo(1,0,0,0)">
+						COMEÇAR
+					</button>
+				</div>
+				<div class="container-contact100-form-btn">
+					<input class="contact100-form-btn" type="submit" value="Encerrar">
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('images/estudo.jpg');">
+			</div>
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+	<script src="js/crono.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+	<script src="js/fastclick.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/fixed-responsive-nav.js"></script>
+
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>

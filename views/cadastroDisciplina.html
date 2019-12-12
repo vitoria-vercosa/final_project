@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Athena - Cadastro Disciplinas</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../public/img/icons/owl.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../public/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../public/css/CadastroCSS.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Disciplinas
+				</span>
+				<div id="disciplina">
+					<label class="label-input100" for="name">Informe o nome da disciplina</label>
+					<div class="wrap-input100 validate-input" data-validate = "Digite o nome da disciplina">
+						<input id="usuario" class="input100" type="text" name="disciplina" placeholder="Disciplina">
+						<span class="focus-input100"></span>
+					</div>
+					<label class="label-input100" for="name">Informe o nome do conteúdo desta disciplina</label>
+					<div class="wrap-input100 validate-input" data-validate = "Digite o nome do conteúdo">
+						<input id="usuario" class="input100" type="text" name="conteudo" placeholder="Conteúdo">
+						<span class="focus-input100"></span>
+					</div>
+					<div id="imendaHTMLconteudo"></div>
+					<a href="#" id="btnAdicionaConteudo" ><i class="fa fa-plus"></i> Adicionar mais um conteúdo</a>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						PRÓXIMO
+					</button>
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('../public/img/livros.jpg');">
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="../public/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../public/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../public/vendor/bootstrap/js/popper.js"></script>
+	<script src="../public/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../public/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="../public/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../public/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../public/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../public/js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>

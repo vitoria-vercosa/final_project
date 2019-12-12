@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/carousel-semana.css" >
+  <script src="js/carousel-semana.js"></script>
+  <title>Cadastro Passo 1</title>
+</head>
+
+<body class="morpheus-den-gradient">
+  <!--<h1>Hello, world!</h1> -->
+
+  <div class="container" id="form">
+
+    <div class="row">
+      <h1>Sistema de Controle de Alunos</h1>
+      <img id="ajuda" data-toggle="modal" data-target="#modalAutora" src="img/ajuda.jpg"
+        style="width: 40px; height: 40px; margin-left: 20px;">
+    </div>
+
+    <div class="modal fade" id="modalAutora">
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Autor</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="img/autora.jpg" alt="autora" class="float-left" style="width: 30px; height: 30px; border-radius: 50%;
+                          width: 150px;
+                          height: 150px;
+                          overflow: hidden;
+                          position: relative;">
+            <p>Olá, sou Vitoria Verçosa!!! Aluna do curso de Ciencia da Computação na Univeridade Federal do Ceará
+              atualmente cursando o oitavo semestre
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="card container" style="width: 650px;padding: 0%;">
+
+      <div class="card-header container" style="background-color: rgb(32, 93, 185); color: white">
+        <strong>Suas Informacoes Pessoais</strong>
+      </div>
+      <!--close card-header-->
+      <form id="form_aluno" action="/api/user/salvarCadastro" method="POST">
+      <div class="card-body container">
+
+        <div class="form-row">
+
+          <div class="form-group col-md-12">
+            <label for="inputNome"><strong>Nome</strong></label>
+            <input type="text" class="form-control" id="inputNome" name="nome" required>
+          </div>
+
+        </div>
+        <!--close row-->
+
+        
+        <div class="form-row">
+
+          <div class="form-group col-md-12">
+
+            <label for="inputNickname"><strong>Nickname: </strong></label>
+            <input type="text" class="form-control" id="inputNickname" placeholder="Nickname" name="nickname" required>
+
+          </div>
+
+        </div><!--close row-->
+
+        <div class="form-row">
+
+          <div class="form-group col-md-12">
+
+            <label for="inputEmail"><strong>Email</strong></label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
+
+          </div>
+
+        </div>
+        <!--close row-->
+
+        <div class="form-row">
+
+          <div class="form-group col-md-3">
+
+            <label for="inputDataNasc"><strong>Data de Nasc.</strong></label>
+            <input type="text" class="form-control" id="inputDataNasc" placeholder="05/06/1972" name="dataNasc"
+              required>
+
+          </div>
+
+          <div class="form-group col-md-3">
+
+            <label for="inputDataNasc" style="color: white;">Data de Nascimento</label>
+          </div>
+
+          <div class="form-group col-md-1">
+
+            <label for="inputDDD"><strong>DDD</strong></label>
+            <input type="text" class="form-control" id="inputDDD" name="DDD" required>
+
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="inputTelefone"><strong>Telefone</strong></label>
+            <input type="text" class="form-control" id="inputTelefone" name="telefone" required>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="inputOperadora"><strong>Operadora</strong></label>
+            <select class="form-control" id="inputOperadora" name="operadora" required>
+              <option selected>...</option>
+              <option>Oi</option>
+              <option>Tim</option>
+              <option>Claro</option>
+              <option>Vivo</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--close card-->
+  <div class="card container" style="width: 650px;padding: 0%;">
+
+    <div class="card-header container" style="background-color: rgb(32, 93, 185); color: white">
+      <strong>Seu tempo livre</strong>
+    </div>
+    <!--close card-header-->
+
+    <div class="card-body container">
+        <div class="form-row">
+          <div class="col-sm-10">
+            <label for="inputNome"><strong>Quantas horas livres voce tem ?</strong></label>
+
+          </div>
+          <br>
+          <div class="col-sm-10">
+            <div class="card" style="width: 50px;border: none;">
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+            </div>
+
+            <div class="card">
+              <div id="carouselExampleIndicators" class="carousel slide container" data-interval="0">
+
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                </ol>
+
+                <div class="carousel-inner" style="border: none;">
+                  <div class="carousel-item active">
+                    <!--<img class="d-block w-100" src="../public/img/autora.jpg" alt="Primeiro Slide">-->
+                    <label>Segunda</label>
+                    <input type="number" name="segunda" class="form-control" min="0" max="20" placeholder="segunda">
+                  </div>
+                  <div class="carousel-item">
+                    <label>Terca</label>
+                    <input type="number" name="terca" class="form-control" min="0" max="20" placeholder="terca">
+                  </div>
+                  <div class="carousel-item">
+                    <label>Quarta</label>
+                    <input type="number" name="quarta" class="form-control" min="0" max="20" placeholder="quarta">
+                  </div>
+                  <div class="carousel-item">
+                    <label>Quinta</label>
+                    <input type="number" name="quinta" class="form-control" min="0" max="20" placeholder="quinta">
+                  </div>
+                  <div class="carousel-item">
+                    <label>Sexta</label>
+                    <input type="number" name="sexta" class="form-control" min="0" max="20" placeholder="sexta">
+                  </div>
+                  <div class="carousel-item">
+                    <label>Sabado</label>
+                    <input type="number" name="sabado" class="form-control" min="0" max="20" placeholder="sabado">
+                  </div>
+                  <div class="carousel-item">
+                    <label>Domingo</label>
+                    <input type="number" name="domingo" class="form-control" min="0" max="20" placeholder="domingo">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card" style="width: 50px;border: none;">
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+              </a>
+            </div>
+
+          </div>
+          </p>
+          <div class="form-row">
+
+            <div class="form-group col-md-12">
+              <label for="inputNome"><strong>Quantas disciplinas voce tem ?</strong></label>
+              <input type="number" class="form-control" id="contDisci" name="contDisci" required>
+            </div>
+
+          </div>
+          <!--close row-->
+          <div class="card-footer" style="background-color: rgb(240, 240, 240); color: white">
+            <button type="submit" class="btn float-right btn-light" value="Confirmar">Cadastrar</button>
+            <button type="reset" class="btn float-right btn-light" value="Limpar">Limpar</button>
+          </div>
+    </div>
+    </div>
+  <!--close card-->
+
+  </form>
+  </div>
+
+  <script src="js/aluno.js"></script>
+    <script>
+        $('.carousel').carousel({wrap: false});
+    </script>
+</body>
+
+</html>

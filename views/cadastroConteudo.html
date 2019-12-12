@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" >    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="../public/css/carousel-semana.css" >
+    <script src="../public/js/carousel-semana.js"></script>
+
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    
+    <title>Cadastro Passo 2</title>
+  </head>
+  <body>
+    <!--<h1>Hello, world!</h1> -->
+
+     <div class="container" id="form">
+
+        <div class="row">
+            <h1>Sistema de Controle de Alunos</h1>
+            <img id="ajuda" data-toggle="modal" data-target="#modalAutora" src="img/ajuda.jpg"  style="width: 40px; height: 40px; margin-left: 20px;" >
+        </div>
+      
+        <div class="modal fade" id="modalAutora">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+                      <div class="modal-header">
+                          <h4 class="modal-title">Autor</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="../public/img/autora.jpg" alt="autora" class="float-left" 
+                          style="width: 30px; height: 30px; border-radius: 50%;
+                          width: 150px;
+                          height: 150px;
+                          overflow: hidden;
+                          position: relative;">
+                          <p>Olá, sou Vitoria Verçosa!!! Aluna do curso de Ciencia da Computação na Univeridade Federal do Ceará
+                            atualmente cursando o oitavo semestre
+                          </p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+            </div>
+
+        </div>
+    
+
+      <div class="card container" style="width: 650px;padding: 0%;">
+
+            <div class="card-header container" style="background-color: rgb(32, 93, 185); color: white"  >
+              <strong>Suas Informacoes Pessoais</strong>
+            </div> <!--close card-header-->
+
+            <div class="card-body container">
+                <!--<form id="form_aluno"  onsubmit="event.preventDefault(); adicionarAluno();">-->  
+                <form id="form_aluno" action="/api/alunos" method="POST">
+
+                    <div class="form-row" ><!--<div class="form-row row " > -->
+                        <div class="form-group col-md-12">
+                            <label for="customRange2"><strong> Nome do conteúdos</strong></label>
+                            <input type="text" class="form-control" id="nomeDisci" name="nomeDisci" required >
+                        </div>    
+                    </div><!--close row-->
+
+
+                <div class="form-row" ><!--<div class="form-row row " > -->
+                        <div class="form-group col-md-12">
+                            <label for="customRange2"><strong> Grau de dificuldade atribuido ao conteúdo</strong></label>
+                            <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                        </div>    
+                </div><!--close row-->
+
+                <div class="card-footer" style="background-color: rgb(240, 240, 240); color: white"  >
+                    <button type="submit" class="btn float-right btn-light" value="Confirmar">Proximo</button>
+                    <button type="reset" class="btn float-right btn-light" value="Limpar">Limpar</button>
+                    <!--<input type="submit" class="btn float-right btn-light" value="Inserir Linha" onclick="processar('tableAluno')">-->
+                    
+                </div><!--close card-footer -->
+                </form>
+            </div> <!--close card-body -->
+
+
+
+      </div> <!--close card-->
+    </div>
+
+    <script src="js/aluno.js"></script>
+    <script>
+        $('.carousel').carousel({wrap: false});
+    </script>
+  </body>
+</html>
